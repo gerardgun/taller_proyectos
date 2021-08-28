@@ -3,7 +3,7 @@ import re
 import unidecode
 from psycopg2 import Error
 
-def test_connection(self):
+def test_connection():
     try:
         # Connect to an existing database
         connection = psycopg2.connect(user="modulo4",
@@ -26,6 +26,7 @@ def test_connection(self):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is closed")
+
 
 def get_data():
     connection = psycopg2.connect(user="modulo4",
